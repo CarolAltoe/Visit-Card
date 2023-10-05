@@ -1,0 +1,33 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+
+.content{
+    width: 80%;
+    margin: 20px auto;
+    margin-bottom: 50px;
+
+    .form{
+       
+
+        mat-form-field{
+            div{
+                .mdc-text-field--filled:not(.mdc-text-field--disabled){
+                    background-color: transparent;
+                }
+            } 
+
+            .mat-mdc-form-field{
+                display: flex;
+            }
+        }
+
+
+
+       
+        
+        
+    }
+}

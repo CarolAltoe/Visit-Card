@@ -1,0 +1,26 @@
+[
+    {
+        "id" : 1,
+        "title" : "Visite meu Blog",
+        "url": "https://mcmariacarolina.wordpress.com/",
+        "icon": "fab fa-wordpress-simple"
+    },
+    {
+        "id" : 2,
+        "title" : "Se inscreva no meu Canal",
+        "url": "https://youtube.com/@mariacarolina000?si=RCuEsC14AFp0Cn2v",
+        "icon": "fab fa-youtube"
+    },
+    {
+        "id" : 3,
+        "title" : "Instagram",
+        "url": "https://instagram.com/carolinabroedel?igshid=NzZlODBkYWE4Ng==",
+        "icon": "fab fa-instagram"
+    },
+    {
+        "id" : 4,
+        "title" : "GitHub",
+        "url": "https://github.com/CarolAltoe",
+        "icon": "fab fa-github"
+    }
+]

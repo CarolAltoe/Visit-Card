@@ -1,0 +1,29 @@
+/* styles-dark.css */
+
+.container{
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(118,9,121,1) 100%);
+  color: white; 
+
+
+  .home{
+    .links{
+      u {
+        li{
+          color: white;
+          border-color: white;
+          box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.897);
+        }
+      }
+    }
+  }
+
+
+  .form-group{
+    label{
+      color: white;
+    }
+  }
+}
+
+
+
