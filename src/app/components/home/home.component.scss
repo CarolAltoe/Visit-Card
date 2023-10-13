@@ -8,12 +8,16 @@
         }
     }
 
+  
+    .shadow{
+        box-shadow: 2px 2px 5px rgba(rgb(85, 26, 139), 0.897);
+    }
+  
 
-    .links{
-        ul{
-            li{
-                box-shadow: 2px 2px 5px rgba(rgb(85, 26, 139), 0.897);
-            }
-        }
+    .surprise{
+        width: 100%;
+        justify-content: center;
+        padding: 10px 16px;
+        border-radius: 3px;
     }
 }

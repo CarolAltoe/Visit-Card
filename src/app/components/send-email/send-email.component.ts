@@ -1,10 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { EmailService } from 'src/app/services/email.service';
-import  emailjs, { EmailJSResponseStatus }  from '@emailjs/browser';
-
-
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-send-email',
@@ -14,42 +11,47 @@ import  emailjs, { EmailJSResponseStatus }  from '@emailjs/browser';
 export class SendEmailComponent {
 
   form!: FormGroup;
-  
-  constructor(private formBuilder: FormBuilder) {}
 
-  ngOnInit(){
+  constructor(private formBuilder: FormBuilder) { }
+
+  ngOnInit() {
     this.form = this.formBuilder.group({
-      from: ["semprecheiadegraca@gmail.com"],
+      from: [null, [Validators.required, Validators.email]],
       name: [null, [Validators.required]],
-      to: [null, [Validators.required, Validators.email]],
+      to: ["semprecheiadegraca@gmail.com"],
       subject: [null],
-      message: [null, Validators.required],
-      reply_to:  ["semprecheiadegraca@gmail.com"],
+      message: [null, Validators.required]
     })
-  }
-
-  verifyTouchedValid(campo: any){
-    return !campo.valid && campo.touched
-  }
-
-  addStyleError(campo: any){
-    return {
-      'has-error': this.verifyTouchedValid(campo),
-      'has-feedback': this.verifyTouchedValid(campo)
-    }
-  }
-
+  };
 
   public sendEmail(e: Event) {
     e.preventDefault();
-    emailjs.sendForm("service_eo861pf","template_71bg817",
+    emailjs.sendForm("service_eo861pf", "template_71bg817",
       e.target as HTMLFormElement, 'Tx1SI6fTY6Obipi8Y')
-        .then((result: EmailJSResponseStatus) => {
-          console.log(result.text);
-          console.log("eeeeeeeeeeeeeeee")
-        }, (error: any) => {
-          console.log("eeerooouuuuu")
-          console.log(error.text);
-        });
+      .then((result: EmailJSResponseStatus) => {
+        Swal.fire('Email successfully sent!', '', 'success');
+        console.log(result.text);
+        console.log(this.form);
+        this.resert();
+      }, (error: any) => {
+        Swal.fire('Error sending email.!', '', 'error');
+        console.log(error.text);
+      });
+    console.log(this.form);
   }
+
+  resert(){
+    this.form.reset();
+  }
+
+  verifyTouchedValid(campo: any) {
+    return !this.form.get(campo)?.valid && this.form.get(campo)?.touched;
+  }
+
+  addStyleError(campo: any) {
+    return {
+      'error': this.verifyTouchedValid(campo),
+    }
+  };
+
 }

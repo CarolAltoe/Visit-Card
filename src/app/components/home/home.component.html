@@ -1,47 +1,71 @@
-<div class="text-center content" >
+<div class="text-center content">
 
-  <div class="m-2">
-    <p class="text-lg p-2 " >Me acompanhe nas redes!</p>
+  <div class="m-2 px-5">
+    <p class="text-lg p-2 ">Discover my work and follow me on social media!</p>
   </div>
+
+  <div class="links">
+    <ul class="w-4/5 mx-auto">
+      <li *ngFor="let link of links" class="py-3 px-4 m-3 border border-purple-900 
+          rounded-full after:border-zinc-100 shadow">
+
+        <a class="m-2 p-2 items-center justify-center" href="{{link.url}}" target="_blank">
+          <i class="{{link.icon}}"></i> {{link.title}}
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+  <div>
+    <p class="text-2xl fa-fade ">. . .</p>
+  </div>
+
+  <div class="p-3 m-3 flex icons justify-center">
+
+    <a href="https://api.whatsapp.com/send?phone=5528999641805"
+      target="_blank" class="px-3 ">
+      <i class='fab fa-whatsapp '></i>
+      <!-- fa-beat-fade  style='color: green' -->
+
+    </a>
+<!-- 
+     (click)="sendEmail()" -->
+    <a  class="px-3 " routerLink="email" >
+      <i class="fas fa-envelope "></i>
+    </a>
    
+    <a href="#" class="px-3 ">
+      <i class='fab fa-pix' (click)="getPix()"></i>
+    </a>
 
-    <div class="links">
-        <ul class="w-4/5 mx-auto">
-          <li *ngFor="let link of links" 
-            class="py-3 px-4 m-3 border border-purple-900 
-              rounded-full  after:border-zinc-100">
+    <a href="#" class="px-3 ">
+      <i class="far fa-copy" (click)="copyToClipboard()"></i>
+    </a>
 
-            <a class="m-2 p-2 items-center justify-center" 
-              href="{{link.url}}" target="_blank">
+    <a href="tel:+5528999641805" class="px-3 ">
+      <i class="fas fa-phone"></i>
+    </a>
 
-                <i class="{{link.icon}}"></i>  {{link.title}}
-            </a>
-          </li>
-        </ul>
-      </div>
+  </div>
 
+  <div>
+    <p class="text-2xl fa-fade ">. . .</p>
+  </div>
 
-      <div>
-        <p class="text-2xl ">. . .</p> 
-      </div>
-
-      <div class="p-3 m-3 flex icons justify-center" >
-      
-        <a href="https://api.whatsapp.com/send?phone=5528999641805" target="_blank"
-          class="px-3 " >
-          <i class='fab fa-whatsapp ' ></i> 
-          <!-- fa-beat-fade  style='color: green' -->
-         
-        </a> 
-        
-        <a routerLink="email" class="px-3 " >
-          <i class="fas fa-envelope "></i>
-        </a>
+  <div class="w-60 mx-auto py-3 px-3 my-3 border border-purple-900 
+  rounded-full after:border-zinc-100 shadow fa-bea">
+    <a href="#" (click)="getSurprise()"
+      class="m-2 p-2 items-center justify-center "
+    >
+      Click to be surprised!
+    </a>
     
-        <a href="http://localhost:45601/" target="_blank" class="px-3 ">
-          <i class="fas fa-share-square"></i>
-        </a>
-      
-      </div> 
-         
+  </div>
+
+  <div>
+    <p class="text-2xl fa-fade ">. . .</p>
+  </div>
+
 </div>
+

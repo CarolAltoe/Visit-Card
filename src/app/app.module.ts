@@ -9,12 +9,10 @@ import { MaterialModule } from './modules/material.module';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { LinkService } from './services/link.service';
-import { EmailService } from './services/email.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
 import { SendEmailComponent } from './components/send-email/send-email.component';
-import { WaterDropComponent } from './water-drop/water-drop.component';
-import { BubblesComponent } from './bubbles/bubbles.component';
+
 
 
 @NgModule({
@@ -23,9 +21,7 @@ import { BubblesComponent } from './bubbles/bubbles.component';
     HeaderComponent,
     HomeComponent,
     FooterComponent,
-    SendEmailComponent,
-    WaterDropComponent,
-    BubblesComponent,
+    SendEmailComponent
   ],
   imports: [
     BrowserModule,
@@ -37,8 +33,7 @@ import { BubblesComponent } from './bubbles/bubbles.component';
     BrowserAnimationsModule
   ],
   providers: [  
-    LinkService,
-    EmailService,
+    LinkService
   ],
   bootstrap: [AppComponent]
 })

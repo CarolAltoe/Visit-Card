@@ -10,24 +10,41 @@
     margin-bottom: 50px;
 
     .form{
-       
+        width: 80%;
+        margin: auto;
 
-        mat-form-field{
-            div{
-                .mdc-text-field--filled:not(.mdc-text-field--disabled){
-                    background-color: transparent;
-                }
-            } 
+        .campo{
+            margin: 20px auto;
+            justify-content: center;
+            
+            input, textarea{
+                display: block;
+                padding: 10px;
+                border-radius: 5px;
+                width: 100%;
+                box-shadow: 2px 2px 5px rgba(rgb(85, 26, 139), 0.897);
+            }
 
-            .mat-mdc-form-field{
-                display: flex;
+
+            .error{
+                border: 2px solid red;
+            }
+
+            mat-hint{
+                color: rgb(226, 88, 88);
             }
         }
-
-
-
        
-        
-        
+
+        .btn{
+           display: flex;
+           justify-content: space-evenly;
+
+           button{
+                padding: 6px ;
+                box-shadow: 2px 2px 5px rgba(rgb(85, 26, 139), 0.897);
+           }
+        }       
+     
     }
 }

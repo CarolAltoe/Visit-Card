@@ -1,13 +1,13 @@
 [
     {
         "id" : 1,
-        "title" : "Visite meu Blog",
+        "title" : "Visit my blog",
         "url": "https://mcmariacarolina.wordpress.com/",
-        "icon": "fab fa-wordpress-simple"
+        "icon": "fa-solid fa-earth-americas"
     },
     {
         "id" : 2,
-        "title" : "Se inscreva no meu Canal",
+        "title" : "Subscribe on my channel",
         "url": "https://youtube.com/@mariacarolina000?si=RCuEsC14AFp0Cn2v",
         "icon": "fab fa-youtube"
     },
