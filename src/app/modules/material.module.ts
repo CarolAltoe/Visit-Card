@@ -50,7 +50,6 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     MatSelectModule,
     MatSlideToggleModule,
     
-    
   ]
 })
 export class MaterialModule { }

@@ -12,7 +12,7 @@ import { LinkService } from './services/link.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
 import { SendEmailComponent } from './components/send-email/send-email.component';
-
+import { PomodoroComponent } from './components/pomodoro/pomodoro.component';
 
 
 @NgModule({
@@ -21,7 +21,8 @@ import { SendEmailComponent } from './components/send-email/send-email.component
     HeaderComponent,
     HomeComponent,
     FooterComponent,
-    SendEmailComponent
+    SendEmailComponent,
+    PomodoroComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +34,7 @@ import { SendEmailComponent } from './components/send-email/send-email.component
     BrowserAnimationsModule
   ],
   providers: [  
-    LinkService
+    LinkService,
   ],
   bootstrap: [AppComponent]
 })
