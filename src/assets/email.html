@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template email</title>
+</head>
+<body style="margin:0; padding: 0; font-size: 18px; max-width: 100%; height: auto; ">
+
+    <header style="display: flex; justify-content: space-between;
+        @media screen { display: block; }">
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGEXqxGXZzmuXxc09wMbqtzTjAcxex0A9oww&usqp=CAU"
+            alt="" style="max-width: 100%; height: auto;"
+        >
+
+        <h1 style="padding: 20px; margin: 20px; " >Saudações!</h1>
+
+    </header>
+
+    <section style="width: 80%; margin: auto; ">
+
+        <p>Me chamo {{name}}, e gostaria de falar sobre o assunto a seguir {{subject}}:</p>
+
+        <p style="padding: 12px; border-left: 4px solid #d0d0d0; font-style: italic;">
+        {{message}}
+        </p>
+
+        <p>
+        Gostaria que entrasse em contato comigo por meio do endereço de email({{to}}) em caso de dúvidas e/ou para discorrermos melhor sobre o assunto. <br>
+        Na certeza de sua atenção, agradeço.
+        </p>
+       
+
+    </section>
+
+
+    <footer style="max-width: 100%; height: auto;">
+        <p style="width: 80%; margin: auto;">
+            Atenciosamente,<br>{{name}}
+        </p>
+
+        <div style="display: flex; justify-content: space-between;">
+
+            <div style=" width: 50%; float: left; overflow: hidden;">
+                <img src="https://media.istockphoto.com/id/1254324905/th/%E0%B9%80%E0%B8%A7%E0%B8%84%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C/%E0%B8%A4%E0%B8%94%E0%B8%B9%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%99%E0%B8%AA%E0%B8%B5%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%A7-%E0%B9%83%E0%B8%9A%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%99.jpg?s=170667a&w=0&k=20&c=pZm7fBi9At4qNJK4YFdiH5vvFWidJnU8H4vta3QsB6Q=" 
+                    alt="Imagem" style="width: 100%; display: block; transform: scaleX(-1); 
+                    clip-path: polygon(30% 100%, 100% 0, 100% 100%, 40% 100%);"
+                 >
+            </div>
+
+            <div style=" width: 50%; float: left; overflow: hidden;">
+                <img src="https://media.istockphoto.com/id/1254324905/th/%E0%B9%80%E0%B8%A7%E0%B8%84%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C/%E0%B8%A4%E0%B8%94%E0%B8%B9%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%99%E0%B8%AA%E0%B8%B5%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%A7-%E0%B9%83%E0%B8%9A%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%99.jpg?s=170667a&w=0&k=20&c=pZm7fBi9At4qNJK4YFdiH5vvFWidJnU8H4vta3QsB6Q=" 
+                    alt="Imagem" style="width: 100%; display: block;
+                    clip-path: polygon(30% 100%, 100% 0, 100% 100%, 40% 100%);"
+                 >
+            </div>
+        </div>
+        
+    </footer>
+    
+</body>
+</html>

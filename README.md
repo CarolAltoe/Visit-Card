@@ -2,6 +2,17 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
 
+## Observations
+
+Este projeto é a primeira versão do meu cartão de visitas virtual.
+A versão que apresnetei. 
+O component Pomodoro pode ser ignorado, pois está imcompleto e é 
+apenas uma ideia, bem como vale ressaltar que há vários trechos de código 
+comentados ao longo dos arquivos (pois estava testando)
+Inclusive há várias imagens e gifs na pasta assets que não estão
+sendo utilizados no projeto, mas estão lá como opção para teste e caso futuramente eu decida trocar/utilizar. 
+Haverá outra versão com melhorias. Aguarde. Grata.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

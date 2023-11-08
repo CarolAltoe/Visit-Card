@@ -1,0 +1,62 @@
+
+<div class="content">
+    <div class="pomodoro-widget">
+        <h1>Pomodoro Timer</h1>
+        <div class="timer">
+            <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+        <button id="start">Start</button>
+        <button id="reset">Reset</button>
+    </div>
+    <script >
+
+        let timer;
+        let minutes = 25;
+        let seconds = 0;
+
+        const startButton = document.getElementById('start');
+        const resetButton = document.getElementById('reset');
+        const minutesSpan = document.getElementById('minutes');
+        const secondsSpan = document.getElementById('seconds');
+
+        startButton.addEventListener('click', startTimer);
+        resetButton.addEventListener('click', resetTimer);
+
+        function startTimer() {
+            if (!timer) {
+                timer = setInterval(updateTimer, 1000);
+                startButton.textContent = 'Pause';
+            } else {
+                clearInterval(timer);
+                timer = null;
+                startButton.textContent = 'Resume';
+            }
+        }
+
+        function updateTimer() {
+            if (seconds > 0) {
+                seconds--;
+            } else if (minutes > 0) {
+                seconds = 59;
+                minutes--;
+            } else {
+                clearInterval(timer);
+                timer = null;
+            }
+
+            minutesSpan.textContent = String(minutes).padStart(2, '0');
+            secondsSpan.textContent = String(seconds).padStart(2, '0');
+        }
+
+        function resetTimer() {
+            clearInterval(timer);
+            timer = null;
+            minutes = 25;
+            seconds = 0;
+            minutesSpan.textContent = '25';
+            secondsSpan.textContent = '00';
+            startButton.textContent = 'Start';
+        }
+
+    </script>
+</div>
